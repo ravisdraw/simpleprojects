@@ -1,19 +1,29 @@
+.title {
+  width: auto;
+  text-align: center;
+  font-size: 50px;
+  height: 12vh;
+  margin: 0;
+}
+
+
 .container {
   display: flex;
   /* flex-direction: column; */
   width: 80vw;
+  height: 72vh;
 }
 
 .panel {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 58vh;
+  height: 55vh;
   border-radius: 50px;
   color: white;
   cursor: pointer;
   flex: 0.5;
-  margin: 10px;
+  margin: 15px;
   position: relative;
   transition: flex 0.8s ease-in;
   text-align: center;
@@ -39,15 +49,22 @@
   transition: opacity 0.3s ease-in 0.4s;
 }
 
-.day {
-  font-size: 24px;
+.panel .circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 150px;
+  background: #ffffff;
   position: absolute;
-  /* bottom: 20px; */
-  top: 20px;
-  margin: 0;
+  bottom: 14px;
+  left: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   opacity: 1;
-  transition: opacity 0.3s ease-in 0.4s;
-  left: 26px;
+  transition: opacity 0.3s ease-out 0.6s;
+}
+
+.panel.active .circle{
+  opacity: 0;
+  transition: opacity 0.3s ease-in 0.3s;
 }
 
 @media(max-width:700px) {

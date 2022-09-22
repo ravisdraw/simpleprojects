@@ -10,16 +10,16 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.panels = document.querySelectorAll('.panel');
-    console.log(this.panels);
-
-    this.panels.forEach((panel: any) => {
-      panel.addEventListener('click', () => {
-        this.removeActiveClass();
-        panel.classList.add('active');
-      });
-    });
   }
   title = 'simpleProjects';
+
+  showTheCards() {
+    console.log(this.panels);
+    this.panels.forEach((panel: any) => {
+      this.removeActiveClass();
+      panel.classList.add('active');
+    });
+  }
 
   removeActiveClass() {
     this.panels.forEach((panel: any) => {
